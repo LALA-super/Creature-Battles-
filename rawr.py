@@ -124,6 +124,7 @@ class angel(creature):
             
         chance = random.random(1, 100) #using the random function allows for a probability of chance for the angels faith, so if an angel plays smart, they can last for a long time in a battle, as there is chances that they get healed and stamina boosted
        
+       #below are all the different effects that faith can provide,
         if chance <= self.Faith * 0.3: 
             effect = random.choice(["divine_light", "blessed_shield", "miracle"])
         if effect == "divine_light":
@@ -131,7 +132,7 @@ class angel(creature):
             return f"{self.name}'s prayer summons Scorching Divinivty, their ATK is increased!"
        
         elif effect == "blessed_shield":
-                print(f"{self.name} is blessed by their God — Energy fully restored!")
+                print(f"{self.name} is blessed by their God, their energy is fully restored!")
                 self.energy = 100
        
         elif effect == "miracle":
